@@ -1,0 +1,11 @@
+# coders.kr deploy manifest — static 2048 game served by nginx.
+# No backend / no identity needed, so we run in standalone mode.
+version: "1"
+mode: standalone
+
+services:
+  web:
+    dockerfile: Dockerfile
+    context: .
+    port: 80
+    expose: public
